@@ -17,13 +17,4 @@ public class StorageConfig {
             return connectionFactory().dataSource("sparkdb");
         }
     }
-
-//    @Configuration
-//    @Profile("default")
-//    static class LocalConfiguration {
-//        @Bean
-//        public DataSource dataSource() {
-//            return connectionFactory().dataSource();
-//        }
-//    }
 }
