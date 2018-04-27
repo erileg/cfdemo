@@ -2,21 +2,20 @@ package de.engram.cfdemo.starship;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 @Data
 @NoArgsConstructor
+@EqualsAndHashCode(of = "id")
 public class StarShip {
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
-    private Long id;
-
+    @Column(columnDefinition = "BINARY(16)")
+    private UUID id = UUID.randomUUID();
     private String name;
     private String model;
     private String manufacturer;
