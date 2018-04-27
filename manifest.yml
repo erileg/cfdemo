@@ -3,5 +3,6 @@ applications:
 - name: cfdemo
   memory: 1024M
   path: target/cfdemo-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
   instances: 1
   random-route: true
