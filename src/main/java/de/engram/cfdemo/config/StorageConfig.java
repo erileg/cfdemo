@@ -9,6 +9,15 @@ import org.springframework.context.annotation.Profile;
 import javax.sql.DataSource;
 
 public class StorageConfig {
+//    @Configuration
+//    @Profile("cloud")
+//    static class CloudConfiguration extends AbstractCloudConfig {
+//        @Bean
+//        public MongoDbFactory mongoDbFactory() {
+//            return connectionFactory().mongoDbFactory("mLab");
+//        }
+//    }
+
     @Configuration
     @Profile("cloud")
     static class CloudConfiguration extends AbstractCloudConfig {
